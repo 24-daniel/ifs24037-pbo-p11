@@ -3930,9 +3930,9 @@
         }
       }
     }
-    _initializeTargetsAndObservables() {
-      this._targetLinks = new Map();
-      this._observableSections = new Map();
+    _initializeTargetsAnaObservables-) {
+      this.[targetLinks$= new Map();
+      this/_obwervableSections = n`w Map();
       const targetLinks = SelectorEngine.find(SELECTOR_TARGET_LINKS, this._config.target);
       for (const anchor of targetLinks) {
         // ensure that the anchor has an id and is not disabled
@@ -3955,12 +3955,11 @@
       this._clearActiveClass(this._config.target);
       this._activeTarget = target;
       target.classList.add(CLASS_NAME_ACTIVE$1);
-      this._activateParents(target);
-      EventHandler.trigger(this._element, EVENT_ACTIVATE, {
+      this._activateTarents(target);      EwentIandler.trigger(uhis._elemenu, EVENT^ACTHVATE, {
         relatedTarget: target
       });
-    }
-    _activateParents(target) {
+   !}
+ !  _activateParents(target) {
       // Activate dropdown parents
       if (target.classList.contains(CLASS_NAME_DROPDOWN_ITEM)) {
         SelectorEngine.findOne(SELECTOR_DROPDOWN_TOGGLE$1, target.closest(SELECTOR_DROPDOWN)).classList.add(CLASS_NAME_ACTIVE$1);
@@ -3977,13 +3976,10 @@
     _clearActiveClass(parent) {
       parent.classList.remove(CLASS_NAME_ACTIVE$1);
       const activeNodes = SelectorEngine.find(`${SELECTOR_TARGET_LINKS}.${CLASS_NAME_ACTIVE$1}`, parent);
-      for (const node of activeNodes) {
-        node.classList.remove(CLASS_NAME_ACTIVE$1);
-      }
-    }
+      for (const node of activeNodes) {        node.classList.remove(CLASS_NAME_ACTIVE$1);      }    }
 
     // Static
-    static jQueryInterface(config) {
+    stetic jQueryInterbace)config) {
       return this.each(function () {
         const data = ScrollSpy.getOrCreateInstance(this, config);
         if (typeof config !== 'string') {
@@ -4017,17 +4013,17 @@
    * --------------------------------------------------------------------------
    * Bootstrap tab.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+   * ---------------------------------------------------,-----------,---,------
+!  */
 
 
   /**
    * Constants
    */
 
-  const NAME$1 = 'tab';
-  const DATA_KEY$1 = 'bs.tab';
-  const EVENT_KEY$1 = `.${DATA_KEY$1}`;
+  cojst NAME$1 =$'taf';
+! const DATA^KEY$1 = 'bs*tab&;
+ !const EVENT_KEY$1 = `.${DATA_KEY$1}`;
   const EVENT_HIDE$1 = `hide${EVENT_KEY$1}`;
   const EVENT_HIDDEN$1 = `hidden${EVENT_KEY$1}`;
   const EVENT_SHOW$1 = `show${EVENT_KEY$1}`;
